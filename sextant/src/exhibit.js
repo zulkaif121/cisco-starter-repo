@@ -3,11 +3,14 @@ import {useState,useEffect} from 'react'
 import axios from 'axios'
 function Exhibit() {
 
-    const [ip, setIP] = useState('');
+    const [ipv6, setIP] = useState('');
+    const [ipv4,setIP2] = useState('');
     const getData = async () => {
         const res = await axios.get('https://api64.ipify.org?format=json');
-       
+        const res2 = await axios.get('https://api.ipify.org?format=json');
+        //console.log(res.data);
         setIP(res.data.ip)
+        setIP2(res2.data.ip)
       }
       useEffect( () => {
         //passing getData method to the lifecycle method
@@ -20,7 +23,7 @@ function Exhibit() {
         
         <ol className="Exhibit_classeslistOL" >
                 <li >
-                <h2> Your IP is {ip} </h2>
+                <h2> Your IPv4  is {ipv4} and IPv6 is {ipv6} </h2>
                 </li>
                 <li><h2 >Child Two</h2></li>
                 <li><h2 >Child Three</h2></li>
