@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+.banner_heading{
+  text-align: center;
+  color: azure;
+  background-color: #282c34;
+
+}
+
+.Exhibit_classeslistOL {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+.Exhibit_classeslistOL li{
+  float: left;
+  
+}
+.Exhibit_classeslistOL li h2{
+  display:block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.Exhibit_classeslistOL li h2:hover{
+  background-color: #111111;
+}
